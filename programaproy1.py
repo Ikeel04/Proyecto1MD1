@@ -36,3 +36,16 @@ def menu():
         print("3. Finalizar")
         
         opcion = input("Seleccione una opción (1, 2, 3): ")
+
+        if opcion == "1":
+
+        elif opcion == "2":
+
+        elif opcion == "3":
+
+        else:
+            print("Opción no válida. Intente de nuevo.")
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    menu()
