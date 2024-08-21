@@ -38,10 +38,32 @@ def menu():
         opcion = input("Seleccione una opción (1, 2, 3): ")
 
         if opcion == "1":
+            print("\nConstruyendo conjuntos:")
+            print("Conjunto 1:")
+            conjunto1 = construir_conjunto()
+            print("Conjunto 2:")
+            conjunto2 = construir_conjunto()
+            print(f"Conjunto 1: {conjunto1}")
+            print(f"Conjunto 2: {conjunto2}")
 
         elif opcion == "2":
+            print("\nOperar conjuntos:")
+            print("1. Complemento del conjunto 1")
+            print("2. Unión de conjuntos")
+            print("3. Intersección de conjuntos")
+            print("4. Diferencia de conjuntos (Conjunto 1 - Conjunto 2)")
+            print("5. Diferencia Simétrica de conjuntos")
+            
+            operacion = input("Seleccione una operación (1, 2, 3, 4, 5): ")
+
+            if operacion == "1":
+                print(f"Complemento del conjunto 1: {complemento(universal_set, conjunto1)}")
+            elif operacion == "2":
+                print(f"Unión: {union(conjunto1, conjunto2)}")
 
         elif opcion == "3":
+            print("Finalizando el programa...")
+            break
 
         else:
             print("Opción no válida. Intente de nuevo.")
