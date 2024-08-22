@@ -1,8 +1,19 @@
 def complemento(universal_set, conjunto):
-    return universal_set - conjunto
+    # Devuelve un conjunto con los elementos que están en el conjunto universal pero no en el conjunto dado
+    complemento = set()
+    for elemento in universal_set:
+        if elemento not in conjunto:
+            complemento.add(elemento)
+    return complemento
+
 
 def union(conjunto1, conjunto2):
-    return conjunto1 | conjunto2
+    # Devuelve un conjunto con los elementos de ambos conjuntos
+    union = set(conjunto1)
+    for elemento in conjunto2:
+        if elemento not in union:
+            union.add(elemento)
+    return union
 
 
 def interseccion(conjunto1, conjunto2):
@@ -34,6 +45,7 @@ def diferencia_simetrica(conjunto1, conjunto2):
     return diferencia_simetrica
 
 
+# Función para construir un conjunto a partir de la entrada del usuario
 def construir_conjunto():
     while True:
         try:
@@ -45,7 +57,9 @@ def construir_conjunto():
             print(f"Entrada no válida: {e}. Intente de nuevo.")
 
 
+# Función principal para ejecutar el programa
 def menu():
+    # Conjunto universal (A-Z y 0-9)
     universal_set = set("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
 
     conjunto1 = set()
@@ -103,5 +117,6 @@ def menu():
             print("Opción no válida. Intente de nuevo.")
 
 
+# Ejecutar el programa
 if __name__ == "__main__":
     menu()
